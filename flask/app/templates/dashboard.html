@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Dashboard <small> Welcome {{session.username}}</small></h1>
+  <a class="btn btn-success" href="/addemail"> Add Email</a>
+  <a class="btn btn-success" href="/user_profile/{{session.username}}"> User Profile</a>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>Email ID</th>
+      <th>Predicted Label</th>
+      <th>Upload Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+    {% for email in emails %}
+      <tr>
+        <td>{{email.file_name}}</td>
+        <td>{{email.predicted_label}}</td>
+        <td>{{email.upload_date}}</td>
+        <td><a href="predict_email/{{email.id}}" class="btn btn-default pull-right">Predict</a></td>
+        <td>
+          <form action="{{url_for('delete_email', id=email.id)}}" method="post">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="Delete" class="btn btn-danger">
+          </form>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

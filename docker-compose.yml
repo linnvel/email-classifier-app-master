@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  flask:
+    build: ./flask
+    container_name: flask
+    restart: always
+    links:
+      - mysql
+    environment:
+      - APP_NAME=EmailApp
+    ports:
+      - 5000:5000
+
+  mysql:
+    build: ./mysql
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: emailclassifier
+      TZ: America/New_York
+    ports:
+      - 32000:3306

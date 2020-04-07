@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Change Username</h1>
+  <form action="" method="POST">
+    <div class="form-group">
+      <label>Please input new username:</label>
+      <input type="text" name="username" class="form-control" value={{request.form.username}}>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <input type="button" onclick="window.location.href='/user_profile/{{session.username}}'" value="Back" class="btn btn-primary">
+  </form>
+{% endblock %}

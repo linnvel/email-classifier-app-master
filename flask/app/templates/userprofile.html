@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>{{session.username}}'s Profile</h1>
+  <hr>
+  <div>
+    <ul class="list-group">
+      <li class="list-group-item"><span class='text_gray'>Username：</span>{{profile['username']}} <a class="btn btn-default btn-sm" href="/changeusername">Change</a></li>
+      <li class="list-group-item"><span class='text_gray'>Password：</span> ******** <a class="btn btn-default btn-sm" href="/changepassword">Change</a></li>
+      <li class="list-group-item"><span class='text_gray'>Email：</span>{{profile['email']}}</li>
+      <li class="list-group-item"><span class='text_gray'>Name: </span>{{profile['first_name']}} {{profile['mid_name']}} {{profile['last_name']}}</li>
+      <li class="list-group-item"><span class='text_gray'>Phone: </span>{{profile['phone']}}</li>
+      <li class="list-group-item"><span class='text_gray'>Mail Address: </span>{{profile['mail_address']}}</li>
+      <li class="list-group-item"><span class='text_gray'>Occupation: </span>{{profile['occupation']}}</li>
+    </ul>
+  </div>
+
+{% endblock %}
