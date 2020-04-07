@@ -7,7 +7,7 @@ This project is a practice of web application through Python Flask framework and
 The function of the web includes:
 
 1. User sign up, sign in, log out. Note that username is unique.
-2. User profile and change username/password.
+2. View user profile and change username/password.
 3. Upload email file for prediction.
 4. Run the classification model and return result to be displayed on the web interface.
 5. Recover username/password through the user’s registered email.
