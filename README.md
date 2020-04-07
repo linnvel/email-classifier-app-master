@@ -31,4 +31,4 @@ The Machine Learning model used in this project is SVM+TF-IDF. The model file is
 cd flask
 python train_ml.py
 ```
-Also you need to specify your data path while running the code.
+Also you need to specify your data path while running the code. More information about the data and models can be found in [this project](https://github.com/linnvel/text-classifier-master).
