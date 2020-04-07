@@ -4,8 +4,6 @@
 To run the web application:
 
 ```bash
-tar xvf emailapp.tar
-cd EmailApp-master
 docker-compose up --build
 ```
 
@@ -14,7 +12,7 @@ Visit [http://0.0.0.0:5000/](http://0.0.0.0:5000/) in your browser.
 To run unit tests:
 
 ```bash
-cd EmailApp-master/flask/app/unittest
+cd flask/app/unittest
 python test.py
 ```
 
@@ -27,10 +25,10 @@ The test user account is:
 
 The password of MySQL database is `1234`.
 
-The Machine Learning model used in this project is SVM+TF-IDF. The model file is stored in `EmailApp-master/flask /app/static/model`. I also attach the python code of model training. If you want to train the model by yourself, make sure that you intall `termcolor` and `colorama` packages and run the following commands.
+The Machine Learning model used in this project is SVM+TF-IDF. The model file is stored in `flask /app/static/model`. I also attach the python code of model training. If you want to train the model by yourself, make sure that you intall `termcolor` and `colorama` packages and run the following commands.
 
 ```base
-cd EmailApp-master/flask
+cd flask
 python train_ml.py
 ```
 Also you need to specify your data path while running the code.
